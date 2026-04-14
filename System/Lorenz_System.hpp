@@ -5,7 +5,7 @@ class Lorenz{
     public:
     double sigma = 10;
     double rho = 28;
-    double beta = 8 / 3;
+    double beta = 8.0 / 3.0;
 
     std::array<double,3> derivatives(const std::array<double,3>& state){
         double x = state[0];
