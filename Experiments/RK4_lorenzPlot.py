@@ -1,8 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data1 = pd.read_csv("Integrators\lorenz.csv")
-data2 = pd.read_csv("Integrators\lorenz2.csv")
+data1 = pd.read_csv("Integrators\\lorenz.csv")
+data2 = pd.read_csv("Integrators\\lorenz2.csv")
 
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')
