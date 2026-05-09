@@ -13,9 +13,3 @@ plt.plot(t, log_d)
 plt.xlabel("time")
 plt.ylabel("log(distance)")
 plt.show()
-
-coeff = np.polyfit(t, log_d, 1)
-
-lyapunov = coeff[0]
-
-print("Estimated Lyapunov exponent:", lyapunov)
