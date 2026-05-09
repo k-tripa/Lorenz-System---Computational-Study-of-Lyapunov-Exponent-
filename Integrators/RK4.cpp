@@ -11,7 +11,7 @@ int main(){
     int steps = 8000;
 
     std::array<double, 3> state1 = {1, 1, 1};
-    std::array<double, 3> state2 = {1.000001, 1, 1};
+    std::array<double, 3> state2 = {1.0000001, 1, 1};
 
     std::ofstream file("lorenz.csv");
     file << "x,y,z\n";
