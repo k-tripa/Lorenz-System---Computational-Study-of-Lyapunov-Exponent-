@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("Integrators\\lorenz_divergence.csv")
+data = pd.read_csv("Integrators\\lorenz_divergence_RK4.csv")
 
 t = data["t"]
 d = data["distance"]

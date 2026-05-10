@@ -10,15 +10,15 @@ int main(){
     double dt = 0.01;
     int steps = 8000;
 
-    std::array<double, 3> state1 = {1, 1, 1};
-    std::array<double, 3> state2 = {1.0000001, 1, 1};
+    std::array<double, 3> state1 = {1.0000000, 1.0000000, 1.0000000};
+    std::array<double, 3> state2 = {1.0000001, 1.0000000, 1.0000000};
 
-    std::ofstream file("lorenz.csv");
-    file << "x,y,z\n";
-    std::ofstream file2("lorenz2.csv");
-    file2 << "x,y,z\n";
-    std::ofstream divfile("lorenz_divergence.csv");
-    divfile << "t,distance\n";
+    std::ofstream file("lorenz_RK4.csv");
+    file << "i,x,y,z\n";
+    std::ofstream file2("lorenz2_RK4.csv");
+    file2 << "i,x,y,z\n";
+    std::ofstream divfile("lorenz_divergence_RK4.csv");
+    divfile << "i,t,distance\n";
 
     for (int i = 0; i < steps; i++){
         auto k1 = system.derivatives(state1);
@@ -67,9 +67,9 @@ int main(){
         double distance = sqrt((double)(dx*dx + dy*dy + dz*dz));        
         double t = i * dt;
         
-        divfile << t << "," << distance << "\n";
-        file2 << state2[0] << "," << state2[1] << "," << state2[2] << "\n";
-        file << state1[0] << "," << state1[1] << "," << state1[2] << "\n";
+        divfile << i <<","<< t << "," << distance << "\n";
+        file2 << i <<","<< state2[0] << "," << state2[1] << "," << state2[2] << "\n";
+        file << i <<","<< state1[0] << "," << state1[1] << "," << state1[2] << "\n";
     }
 
     file.close();
