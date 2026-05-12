@@ -2,13 +2,13 @@
 #include <fstream>
 #include <cmath>
 #include <array>
-#include "C:\Users\dell\Desktop\Code Folder\Computational physics\MINI PROJECT - PHYSICS ENGINE\System\Lorenz_System.hpp"
+#include "System\\Lorenz_System.hpp"
 
 int main(){
     Lorenz system;
     
     double dt = 0.01;
-    int steps = 8000;
+    int steps = 80000;
     double sum = 0.0;
     double d_0 = 1e-8;
 
@@ -69,7 +69,7 @@ int main(){
         double distance = sqrt((double)(dx*dx + dy*dy + dz*dz));        
         double t = i * dt;
 
-        //RENORMALISING - Gram Schmidt Orthonormalisation
+        //RENORMALISING 
 
         double scale = d_0 / distance;
 

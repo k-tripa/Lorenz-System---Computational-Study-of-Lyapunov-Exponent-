@@ -4,9 +4,9 @@ import numpy as np
 d_0 = 1e-8
 sum = 0.0
 n = 0.0
-d = pd.read_csv("Integrators\\lorenz_divergence_B.csv")
+d = pd.read_csv("Integrators\\lorenz_divergence_RD.csv")
 
-for j in range(8000,80000):
+for j in range(2000,8000):
     d_j = d.iloc[j,2]
     g_k = np.log(d_j/d_0)
     sum += g_k
